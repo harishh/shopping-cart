@@ -1,0 +1,20 @@
+<h1>Your Cart</h1>
+<%= link_to 'Empty Your Cart' , cart_clear_path %>
+<br><br><br>
+
+<ul>
+<% @cart.each do | id, quantity | %>
+   <% product = Product.find_by_id(id) %>
+
+   <li>
+   	  <%= link_to product.title. product %>
+   	  <p><%= product.description %></p>
+   	  <p><%= number_to_currency(prodcut.price, :unit => '$')</p>
+
+   </li>
+
+
+
+
+<% end %>
+</ul>
